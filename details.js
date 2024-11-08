@@ -15,38 +15,23 @@ fetch('./ListaData.json')
 
 // Función para obtener el producto según el nombre
 function getProduct() {
-    for (let i = 0; i < data.length; i++) {
-        let map = data[i];
-        let title = map["name"];
-        
-        if (title === nameFromUrl) {
-            return new Product(
-                map["name"],
-                map["caracteristica1"],
-                map["caracteristica2"],
-                map["caracteristica3"],
-                map["precio"],
-                map["cantidad"],
-                map["imagenes"]
-            );
-        }
-    }
+    return data.find(item => item.name === nameFromUrl);
 }
 
 // Función para renderizar el producto en el DOM
 function renderProduct() {
-    let product = getProduct();
+    const product = getProduct();
     if (!product) {
         console.error("No se encontró el producto");
         return;
     }
 
     // Asignación de los elementos a las propiedades del producto
-    document.getElementById("title").innerHTML = product.name;
-    document.getElementById("caracteristica1").innerHTML = product.caracteristica1;
-    document.getElementById("caracteristica2").innerHTML = product.caracteristica2;
-    document.getElementById("caracteristica3").innerHTML = product.caracteristica3;
-    document.getElementById("price").innerHTML = "$" + product.precio;
+    document.getElementById("Angel").textContent = product.name;
+    document.getElementById("price").textContent = "$" + product.precio;
+    document.getElementById("caracteristica1").textContent = product.caracteristica1;
+    document.getElementById("caracteristica2").textContent = product.caracteristica2;
+    document.getElementById("caracteristica3").textContent = product.caracteristica3;
     document.getElementById("main-img").src = product.imagenes[0];
     document.getElementById("image1").src = product.imagenes[1];
     document.getElementById("image2").src = product.imagenes[2];
