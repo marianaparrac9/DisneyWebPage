@@ -1,24 +1,24 @@
-// Cargar los parámetros de la URL
+
 const params = new URLSearchParams(window.location.search);
 const nameFromUrl = params.get('name');
 
-// Cargar los datos desde el archivo JSON
+
 let data = [];
 
 fetch('./ListaData.json')
     .then(response => response.json())
     .then(jsonData => {
-        data = jsonData; // Guardamos los datos en la variable global
-        renderProduct(); // Llamamos a la función para renderizar el producto
+        data = jsonData; 
+        renderProduct(); 
     })
     .catch(error => console.error("Error al cargar los datos:", error));
 
-// Función para obtener el producto según el nombre
+
 function getProduct() {
     return data.find(item => item.name === nameFromUrl);
 }
 
-// Función para renderizar el producto en el DOM
+
 function renderProduct() {
     const product = getProduct();
     if (!product) {
@@ -26,7 +26,7 @@ function renderProduct() {
         return;
     }
 
-    // Asignación de los elementos a las propiedades del producto
+    
     document.getElementById("Angel").textContent = product.name;
     document.getElementById("price").textContent = "$" + product.precio;
     document.getElementById("caracteristica1").textContent = product.caracteristica1;
@@ -37,7 +37,7 @@ function renderProduct() {
     document.getElementById("image2").src = product.imagenes[2];
 }
 
-// Controladores para incrementar/decrementar la cantidad
+
 let cantidad = 1;
 document.querySelector('.bxs-plus-circle').addEventListener('click', function () {
     cantidad++;
