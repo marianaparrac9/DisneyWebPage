@@ -8,6 +8,7 @@ body, html {
 .wishlist-container {
     width: 100%;
     text-align: center;
+    height: 90vh;
 }
 .header img {
     width: 150px;
@@ -36,6 +37,8 @@ body, html {
     color: white;
     padding: 1rem .5rem;
     border-radius: 10px;
+    margin-top: 7rem;
+    margin-bottom: 3rem;
 }
 
 .image img {
@@ -165,9 +168,6 @@ Estilos de la navegación */
 
 /* Estilos del footer  */
 footer {
-    /* estilo para que se quede en la parte de abajo */
-
-    position: fixed;
     bottom: 0;
     width: 100%;
 }

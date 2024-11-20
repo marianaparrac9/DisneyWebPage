@@ -26,6 +26,10 @@ function registerUser(event){
         email: userEmail.value,
         password: userPassword.value,
         favoritos: [],
+        direccion: '',
+        cardNumber: '',
+        expireDate: '',
+        ccv : '',
     };
     // Validar que los campos no esten vacios
     if (

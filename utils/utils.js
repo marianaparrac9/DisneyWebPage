@@ -8,21 +8,18 @@
     };
     
     
-    //export const for obtain the active user
-        export const obtenerUsuarioActivo = () => {
-        const usuarioActivo = parseInt(localStorage.getItem('user-active'));
-        const usuarios = obtenerUsuarios();
-        // console.log(usuarioActivo); 
-        // console.log(usuarios); 
-    
-        for (const usuario of usuarios){
-            if (usuario.id === usuarioActivo){
-                // console.log(usuario);
-                return usuario;
-            }
-        }
-        return null;
+    //export const for obtain the active user between the registered users
+    export const obtenerUsuarioActivo = () => {
+        const usuarioActivo = localStorage.getItem('user-active');
+        return JSON.parse(usuarioActivo);
+
     };
+    // export const for obtain the information of the active user from local storage
+    export const obtenerInfoUsuarioActivo = () => {
+        const usuarioActivo = localStorage.getItem('user-active');
+        return JSON.parse(usuarioActivo);
+    };
+
     export const logout = () => {
         const usuarioActivoKey = 'user-active'
         localStorage.removeItem(usuarioActivoKey);    

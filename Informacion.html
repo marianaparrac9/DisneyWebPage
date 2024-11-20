@@ -10,7 +10,7 @@
 <body>
 
     <header class="banner">
-        <a href="/index.html" class="logo"><img src="./fotos/logo1.png" /></a>
+        <a href="/mainpage.html" class="logo"><img src="./fotos/logo1.png" /></a>
 
         <div class="busqueda">
             <input type="text" placeholder="¿Qué estas buscando?">
@@ -18,7 +18,7 @@
         </div>
         <div id="nav-items">
             <div>
-                <a href="login.html">Iniciar Sesión</a>
+                <a href="login.html" id="conditional-label">Iniciar Sesión</a>
             </div>
             <div>
                 <a href="contactanos.html">Contactanos</a>
@@ -28,41 +28,6 @@
             </div>
         </div>
     </header>
-
-<div class="card">
-    <div class="header">
-        <img src="./fotos/mickey.png" alt="Mickey Mouse" class="profile-pic">
-        <h1>Información personal</h1>
-    </div>
-        <form >
-            <div class="info-form">
-                <div class="form-section">
-                    <label for="name">Nombre</label>
-                    <input type="text" id="name" name="name" value="Mickey Mouse" disabled>
-    
-                    <label for="email">Correo</label>
-                    <input type="email" id="email" name="email" value="mickey_mouse@disney.com" disabled>
-    
-                    <label for="address">Dirección</label>
-                    <input type="text" id="address" name="address" value="Av. Disneyland #33-12" disabled>
-                </div>
-                <div class="form-section payment-info">
-                    <label for="card-number">Número de tarjeta</label>
-                    <input type="text" id="card-number" name="card-number" placeholder="Número de tarjeta">
-    
-                    <label for="exp-date">Número de expiración</label>
-                    <input type="text" id="exp-date" name="exp-date" placeholder="MM/AA">
-    
-                    <label for="cvv">CVV</label>
-                    <input type="text" id="cvv" name="cvv" placeholder="CVV">
-                </div>
-            </div>
-            <div class="ending">
-                <a class="logout">Cerrar sesión</a>
-                <a href="tienda.html" class="explore">¡Vamos a explorar la tienda!</a >
-            </div>
-        </form>
-</div>
 
 <footer>
             
@@ -78,6 +43,7 @@
     </div>
 </footer>
 <script src="informacion.js" type="module"></script>
+<script src="auth.js"></script>
 
 </body>
 </html>

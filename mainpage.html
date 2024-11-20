@@ -12,13 +12,9 @@
 <body>
     <header class="banner">
         <a href="mainpage.html" class="logo"><img src="./fotos/Recurso 1.png" /></a>
-        <div>
-            <input class="busqueda" type="text" placeholder="¿Qué estas buscando?">
-            <i class='bx bx-search-alt-2' style='color:rgba(19, 114, 206, 1);'></i>
-        </div>
         <div id="nav-items">
-            <div>
-                <a href="login.html">Iniciar Sesión</a>
+            <div >
+                <a href="" id="conditional-label"></a>
             </div>
             <div>
                 <a href="contactanos.html">Contactanos</a>
@@ -41,7 +37,17 @@
             <h1>¡Los favoritos de Todos!</h1>
         </div>
     
-        <div class="boxContainer" id="box"></div> 
+        <div class="boxContainer" id="box">
+            <div class="carousel">
+                <div class="carousel-track">
+                    <img src="https://raw.githubusercontent.com/marianaparrac9/DisneyImages/refs/heads/main/fotos/peluche%20rosada%20sti.webp" alt="Producto 1" class="carousel-image">
+                    <img src="https://raw.githubusercontent.com/marianaparrac9/DisneyImages/refs/heads/main/fotos/principal%20stit%20rosada%20con%20helado.webp" alt="Producto 2" class="carousel-image">
+                    <img src="https://raw.githubusercontent.com/marianaparrac9/DisneyImages/refs/heads/main/fotos/tristeza%20peluche%20.webp" alt="Producto 3" class="carousel-image">
+                </div>
+                <button class="carousel-button prev">❮</button>
+                <button class="carousel-button next">❯</button>
+            </div>
+        </div> 
     </section>
     
 
@@ -58,15 +64,7 @@
         </div>
     </footer>
 
-    <script>
-
-        window.onload = function() {
-            parseDataToProducts();
-            renderLimitedProducts(3); 
-        };
-    </script>
-        <script src="logica.js" defer></script>
-        <script src="Products.js" defer></script>
-        <script src="ListaData.js" defer></script>
+    <script src="mainpage.js"></script>
+    
 </body>
 </html>

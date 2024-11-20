@@ -45,7 +45,7 @@ function loginUser(event){
         alert('Bienvenido');
         window.location.href = 'tienda.html'; 
         const user = validateUser.find(user => user.email === email.value && user.password === password.value);
-        localStorage.setItem(usuarioActivoKey, user.id);
+        localStorage.setItem(usuarioActivoKey, JSON.stringify(user));
 
     }
 

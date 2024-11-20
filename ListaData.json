@@ -1,5 +1,6 @@
 [
     {
+        "id": "1",
         "name": "Ángel Experimento 624",
         "caracteristica1": "Tela suave",
         "caracteristica2": "Antialergico",
@@ -13,6 +14,7 @@
         ]
     },
     {
+        "id": "2",
         "name": "Stitch comiendo helado",
         "caracteristica1": "Tamaño ideal",
         "caracteristica2": "Antialergico",
@@ -26,6 +28,7 @@
         ]
     },
     {
+        "id": "3",
         "name": "Angel comiendo helado",
         "caracteristica1": "Relleno esponjoso",
         "caracteristica2": "Tamaño ideal",
@@ -39,6 +42,7 @@
         ]
     },
     {
+        "id": "4",
         "name": "Mickey Clasico",
         "caracteristica1": "Relleno esponjoso",
         "caracteristica2": "Tamaño ideal",
@@ -52,6 +56,7 @@
         ]
     },
     {
+        "id": "5",
         "name": "Tristeza",
         "caracteristica1": "Costuras reforzadas",
         "caracteristica2": "Colores vibrantes",
@@ -65,6 +70,7 @@
         ]
     },
     {
+        "id": "6",
         "name": "Minnie Mouse",
         "caracteristica1": "Colores vivos",
         "caracteristica2": "Tamaño ideal",
