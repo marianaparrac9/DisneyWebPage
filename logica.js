@@ -1,10 +1,10 @@
 import { obtenerUsuarioActivo } from './utils/utils.js';
 
-// Selecciona el contenedor donde se mostrarán los productos
+
 const boxContainer = document.querySelector('.boxContainer');
 const searchInput = document.getElementById('search-bar');
 
-// Función para cargar productos desde el JSON
+
 async function renderizarProductos() {
     // Obtiene todos los usuarios del localStorage
     const usuarios = JSON.parse(localStorage.getItem('user')) || [];
@@ -13,7 +13,8 @@ async function renderizarProductos() {
 
     if (!usuarioActivo) {
         console.error('No hay un usuario activo');
-        return;
+        alert('debes iniciar sesión para poder acceder a la tienda');
+        window.location.href = "login.html";
     }
 
     // Encuentra el usuario activo dentro del array de usuarios
